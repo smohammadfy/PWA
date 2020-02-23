@@ -1,0 +1,97 @@
+
+<img class="bgpic" src="../../assets/bgpic.jpg" alt="bgpic"/>
+<div class="inorup">
+<mat-button-toggle-group #group="matButtonToggleGroup" value="right">
+  <mat-button-toggle value="left" aria-label="Text align left" class="inup">
+    ورود
+  </mat-button-toggle>
+  <mat-button-toggle value="right" aria-label="Text align right" class="inup" >
+    ثبت نام
+  </mat-button-toggle>
+</mat-button-toggle-group>
+</div>
+  <form *ngIf="group.value === 'right'" dir="rtl">
+    <table class="form" cellspacing="5"><tr>
+      <tr><mat-form-field class="input">
+        <mat-label><mat-icon>person</mat-icon>نام خود را وارد کنید
+        </mat-label>
+        <label>
+          <input  matInput>
+        </label>
+      </mat-form-field></tr>
+      <tr><mat-form-field class="input">
+        <mat-label><mat-icon>person_outline</mat-icon>نام خانوادگی خود را وارد کنید
+        </mat-label>
+        <label>
+          <input  matInput>
+        </label>
+      </mat-form-field></tr>
+      <tr><mat-form-field class="input">
+        <mat-label><mat-icon>
+          person_pin_circle</mat-icon>نام کاربری خود را وارد کنید
+        </mat-label>
+        <label>
+          <input  matInput>
+        </label>
+      </mat-form-field></tr>
+      <tr>
+        <mat-label class="fontsize"> انتخاب جنسیت : </mat-label>
+        <mat-radio-group aria-label="Select an option"  dir="ltr">
+          <mat-radio-button  class="radiobtn" value="1" color="primary"><mat-icon svgIcon="male"></mat-icon>
+            </mat-radio-button>
+          <mat-radio-button  class="radiobtn" value="2" color="primary"><mat-icon svgIcon="female"></mat-icon>
+            </mat-radio-button>
+        </mat-radio-group>
+      </tr>
+      <tr><mat-form-field class="input">
+        <mat-label><mat-icon>phone</mat-icon>شماره موبایل خود را وارد کنید
+        </mat-label>
+        <label>
+          <input  matInput>
+        </label>
+      </mat-form-field></tr>
+      <tr>
+      <mat-form-field class="input">
+        <mat-label>شهر</mat-label>
+        <mat-select>
+          <mat-option value="tehran">تهران</mat-option>
+          <mat-option value="kish">کیش</mat-option>
+        </mat-select>
+      </mat-form-field></tr>
+      <tr><mat-form-field class="input">
+        <mat-label><mat-icon>supervised_user_circle</mat-icon>نام کاربری معرف را وارد کنید
+        </mat-label>
+        <label>
+          <input  matInput>
+        </label>
+      </mat-form-field></tr>
+      <tr>
+      <tr>
+        <mat-radio-button class="radiobtn" color="primary">
+          <mat-label class="fontsize2">
+            شرایط و قوانین را پذیرفته ام
+          </mat-label>
+        </mat-radio-button>
+      </tr>
+      <tr>
+        <button class="mybtn" mat-raised-button color="primary">ادامه</button>
+      </tr>
+    </table>
+  </form>
+<form *ngIf="group.value === 'left'" dir="rtl">
+  <table class="form" cellspacing="5"><tr>
+    <tr><mat-form-field class="input">
+      <mat-label><mat-icon>phone</mat-icon>شماره تماس خود را وارد کنید
+      </mat-label>
+      <label>
+        <input  matInput>
+      </label>
+    <mat-hint dir="ltr">ex : 091212345678</mat-hint>
+    </mat-form-field></tr>
+    <tr>
+      <button class="mybtn" mat-raised-button color="primary">
+        <mat-icon class="activephone">phone</mat-icon>ارسال کد فعال سازی
+      </button>
+    </tr>
+  </table>
+</form>
